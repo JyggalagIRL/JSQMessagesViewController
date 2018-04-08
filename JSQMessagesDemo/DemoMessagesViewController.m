@@ -64,10 +64,13 @@
     
     self.showLoadEarlierMessagesHeader = YES;
     
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage jsq_defaultTypingIndicatorImage]
                                                                               style:UIBarButtonItemStyleBordered
                                                                              target:self
                                                                              action:@selector(receiveMessagePressed:)];
+#pragma clang diagnostic pop
 
     /**
      *  Register custom menu actions for cells.

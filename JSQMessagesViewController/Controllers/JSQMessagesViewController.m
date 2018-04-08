@@ -333,6 +333,8 @@ JSQMessagesKeyboardControllerDelegate>
     return UIInterfaceOrientationMaskAll;
 }
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-implementations"
 - (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
 {
     [super willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
@@ -348,6 +350,7 @@ JSQMessagesKeyboardControllerDelegate>
         [self.collectionView reloadData];
     }
 }
+#pragma clang diagnostic pop
 
 - (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
     [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
